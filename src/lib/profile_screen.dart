@@ -4,9 +4,6 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Your Profile"),
-      ),
       body: ListView(
         children: [
           ProfileHeader(),
@@ -18,19 +15,20 @@ class ProfileScreen extends StatelessWidget {
   }
 }
 
+
 class ProfileHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        CircleAvatar(radius: 50),
-        SizedBox(width: 16),
+        CircleAvatar(radius: 120, backgroundImage: AssetImage('lib/ProfilePicture.png')),
+        SizedBox(width: 50),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("John Doe", style: TextStyle(fontSize: 18)),
-            SizedBox(height: 4),
-            Text("@johndoe"),
+            Text("Chickens for Change", style: TextStyle(fontFamily: 'Raleway', fontSize: 30)),
+            SizedBox(height: 10),
+            Text("@Bantams"),
           ],
         )
       ],
@@ -42,13 +40,13 @@ class ProfileContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 48),
+      padding: EdgeInsets.symmetric(horizontal: 50),
       child: Column(
         children: [
-          ProfileDetail(title: "Name", value: "John Doe"),
-          ProfileDetail(title: "Email", value: "john@doe.com"),
-          ProfileDetail(title: "Phone", value: "+1 123 456 7890"),
-          ProfileDetail(title: "Address", value: "123 Main St, New York NY"),
+          ProfileDetail(title: "Name", value: "Chicken Nuggets"),
+          ProfileDetail(title: "Email", value: "chickens.for.change@trincoll.edu"),
+          ProfileDetail(title: "Phone", value: "+1 (860) 297 5000"),
+          ProfileDetail(title: "Address", value: "300 Summit Street, Hartford"),
         ],
       ),
     );
@@ -68,21 +66,10 @@ class ProfileDetail extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(title),
-          Text(value),
+          Text(title, style: TextStyle(fontFamily:'Raleway' , fontSize: 24)),
+          Text(value, style: TextStyle(fontFamily:'Raleway', fontSize: 24)),
         ],
       ),
     );
   }
 }
-
-//class ProfileScreen extends StatelessWidget {
-//  const ProfileScreen({super.key});
-
-//@override
-//  Widget build(BuildContext context) {
-//    return const Center(
-//      child: Text('Profile Screen'),
-//    );
-//  }
-//}
