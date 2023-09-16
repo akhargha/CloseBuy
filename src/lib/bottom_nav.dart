@@ -29,7 +29,7 @@ class _BottomNavBarAppState extends State<BottomNavBarApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Bottom Navigation Bar App'),
+          title: Text('CloseBuy'),
         ),
         body: _pages[_selectedIndex],
         bottomNavigationBar: BottomNavigationBar(
