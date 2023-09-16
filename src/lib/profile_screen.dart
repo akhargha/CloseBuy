@@ -7,7 +7,7 @@ class ProfileScreen extends StatelessWidget {
       body: ListView(
         children: [
           ProfileHeader(),
-          SizedBox(height: 45),
+          SizedBox(height: 24),
           ProfileContent(),
         ],
       ),
@@ -21,13 +21,13 @@ class ProfileHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        CircleAvatar(radius: 120, backgroundImage: AssetImage('lib/ProfilePicture.png')),
-        SizedBox(width: 50),
+        CircleAvatar(radius: 50, backgroundImage: AssetImage('lib/ProfilePicture.png')),
+        SizedBox(width: 16),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Chickens for Change", style: TextStyle(fontFamily: 'Raleway', fontSize: 30)),
-            SizedBox(height: 10),
+            Text("Chickens for Change", style: TextStyle(fontFamily: 'Raleway', fontSize: 18)),
+            SizedBox(height: 4),
             Text("@Bantams"),
           ],
         )
@@ -40,7 +40,7 @@ class ProfileContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 50),
+      padding: EdgeInsets.symmetric(horizontal: 48),
       child: Column(
         children: [
           ProfileDetail(title: "Name", value: "Chicken Nuggets"),
@@ -66,8 +66,8 @@ class ProfileDetail extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(title, style: TextStyle(fontFamily:'Raleway' , fontSize: 24)),
-          Text(value, style: TextStyle(fontFamily:'Raleway', fontSize: 24)),
+          Text(title, style: TextStyle(fontFamily:'Raleway')),
+          Text(value, style: TextStyle(fontFamily:'Raleway')),
         ],
       ),
     );
