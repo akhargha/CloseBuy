@@ -9,5 +9,10 @@ import 'package:path_provider/path_provider.dart';
 
 class Page extends StatelessWidget
 {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    throw UnimplementedError();
+  }
 
 }
