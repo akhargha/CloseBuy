@@ -2,7 +2,7 @@
 
 A new Flutter project.
 Ki Hwang: check
-Shivanshu check
+Shivanshu: check
 
 ## Getting Started
 
