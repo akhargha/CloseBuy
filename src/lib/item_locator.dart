@@ -1,6 +1,18 @@
 import 'dart:convert';
+import 'dart:io';
 import 'package:flutter/material.dart';
-import 'storage.dart';
+import 'package:path_provider/path_provider.dart';
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Item Locator',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: ItemLocatorPage(),
+    );
+  }
+}
 
 class ItemLocatorPage extends StatefulWidget {
   @override
@@ -22,9 +34,19 @@ class _ItemLocatorPageState extends State<ItemLocatorPage> {
     _loadItems();
   }
 
+  Future<String> get _localPath async {
+    final directory = await getApplicationDocumentsDirectory();
+    return directory.path;
+  }
+
+  Future<File> get _localFile async {
+    final path = await _localPath;
+    return File('$path/items.json');
+  }
+
   _loadItems() async {
     try {
-      final file = await getLocalFile();
+      final file = await _localFile;
       if (await file.exists()) {
         String contents = await file.readAsString();
         List<dynamic> json = jsonDecode(contents);
@@ -53,7 +75,8 @@ class _ItemLocatorPageState extends State<ItemLocatorPage> {
       items.add(newItem);
     });
 
-    saveItemsToFile(items);
+    final file = await _localFile;
+    await file.writeAsString(jsonEncode(items));
 
     _itemNameController.clear();
     _locationController.clear();
