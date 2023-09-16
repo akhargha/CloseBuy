@@ -6,8 +6,9 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: ListTileSelectExample(),
+    return Scaffold(
+      body: ListTileSelectExample(),
+      // body: SearchBar(),
     );
   }
 
@@ -225,5 +226,26 @@ class _ListBuilderState extends State<ListBuilder> {
                   : const SizedBox.shrink(),
               title: Text('item $index'));
         });
+  }
+}
+class SearchBar extends StatefulWidget
+{
+  @override
+  _SearchBarState createState() => _SearchBarState();
+}
+
+
+class _SearchBarState extends State<SearchBar> {
+  final TextEditingController _searchController = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return TextField(
+      controller: _searchController,
+      decoration: InputDecoration(
+          hintText: 'Search...',
+          prefixIcon: Icon(Icons.search)
+      ),
+    );
   }
 }
