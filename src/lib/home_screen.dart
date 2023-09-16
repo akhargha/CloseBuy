@@ -5,8 +5,30 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Home Screen'),
+    return Scaffold(
+      body: SearchBar(),
+    );
+  }
+}
+
+class SearchBar extends StatefulWidget
+{
+  @override
+  _SearchBarState createState() => _SearchBarState();
+}
+
+
+class _SearchBarState extends State<SearchBar> {
+  final TextEditingController _searchController = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return TextField(
+      controller: _searchController,
+      decoration: InputDecoration(
+          hintText: 'Search...',
+          prefixIcon: Icon(Icons.search)
+      ),
     );
   }
 }
