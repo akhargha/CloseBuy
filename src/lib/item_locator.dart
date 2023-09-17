@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 
 class MyApp extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -136,7 +137,7 @@ class _ItemLocatorPageState extends State<ItemLocatorPage> {
                   SizedBox(height: 20),
                   ElevatedButton(
                     onPressed: _saveItem,
-                    child: Text('Submit'),
+                    child: Text(' Submit '),
                   ),
                 ],
               ),

@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'home_screen.dart';
 import 'items_screen.dart';
@@ -29,7 +30,7 @@ class _BottomNavBarAppState extends State<BottomNavBarApp> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('CloseBuy'),
+          title: Text('Bottom Navigation Bar App'),
         ),
         body: _pages[_selectedIndex],
         bottomNavigationBar: BottomNavigationBar(
