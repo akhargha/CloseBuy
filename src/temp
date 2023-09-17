@@ -1,0 +1,24 @@
+@override
+Widget build(BuildContext context) {
+  return Scaffold(
+    appBar: AppBar(title: Text("Item Locator")),
+    body: Column(
+      children: [
+        if (_currentLocation != null)
+          Container(
+            height: 200, // Adjust as needed
+            child: GoogleMap(
+              initialCameraPosition: CameraPosition(
+                target: _currentLocation!,
+                zoom: 14.0,
+              ),
+              onMapCreated: (controller) => _mapController = controller,
+              myLocationEnabled: true,
+              myLocationButtonEnabled: true,
+            ),
+          ),
+        // ... [rest of your widgets]
+      ],
+    ),
+  );
+}
