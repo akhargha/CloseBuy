@@ -29,6 +29,7 @@ class _BottomNavBarAppState extends State<BottomNavBarApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
+        fontFamily: 'Nunito',
         primarySwatch: Colors.blueGrey,
         primaryColor: Colors.black,
       ),
