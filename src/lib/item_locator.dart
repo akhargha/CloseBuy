@@ -137,7 +137,7 @@ class _ItemLocatorPageState extends State<ItemLocatorPage> {
                   SizedBox(height: 20),
                   ElevatedButton(
                     onPressed: _saveItem,
-                    child: Text('Submit'),
+                    child: Text(' Submit '),
                   ),
                 ],
               ),
