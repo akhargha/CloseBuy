@@ -7,6 +7,10 @@ class LoginApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.blueGrey,
+        primaryColor: Colors.black,
+      ),
       home: Scaffold(
         appBar: AppBar(title: Text('Login')),
         body: Stack(
@@ -15,7 +19,7 @@ class LoginApp extends StatelessWidget {
               color: Color(0xFFc4ff61),  // Your desired hex color
             ),
             Center(
-              child: Image.asset('lib/splash.png', fit: BoxFit.cover),
+              child: Image.asset('lib/background.png', fit: BoxFit.cover),
             ),
             LoginForm(),
           ],

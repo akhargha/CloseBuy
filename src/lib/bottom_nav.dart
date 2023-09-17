@@ -28,6 +28,10 @@ class _BottomNavBarAppState extends State<BottomNavBarApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.blueGrey,
+        primaryColor: Colors.black,
+      ),
       home: Scaffold(
         appBar: AppBar(
           title: Text('CloseBuy', style:TextStyle(fontWeight: FontWeight.bold)),
@@ -42,7 +46,7 @@ class _BottomNavBarAppState extends State<BottomNavBarApp> {
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_cart),
+              icon: Icon(Icons.add_circle_outline),
               label: 'Items',
             ),
             BottomNavigationBarItem(
