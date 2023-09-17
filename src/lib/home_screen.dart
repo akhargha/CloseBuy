@@ -11,7 +11,7 @@ class HomeScreen extends StatelessWidget {
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new MyHomePage(title: 'ListView with Search'),
+      home: new MyHomePage(title: 'Search Items'),
     );
   }
 }
