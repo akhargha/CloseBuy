@@ -47,6 +47,7 @@ class ProfileContent extends StatelessWidget {
           ProfileDetail(title: "Email", value: "chickens.for.change@trincoll.edu"),
           ProfileDetail(title: "Phone", value: "+1 (860) 297 5000"),
           ProfileDetail(title: "Address", value: "300 Summit Street, Hartford"),
+          ProfileDetail(title: "Trinity ID", value: "299577898"),
         ],
       ),
     );
@@ -73,3 +74,4 @@ class ProfileDetail extends StatelessWidget {
     );
   }
 }
+
