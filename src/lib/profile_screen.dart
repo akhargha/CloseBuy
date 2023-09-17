@@ -10,6 +10,7 @@ class ProfileScreen extends StatelessWidget {
           SizedBox(height: 24),
           ProfileContent(),
           NotificationBox(),
+          Badges(),
         ],
       ),
     );
@@ -58,25 +59,46 @@ class NotificationBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 24, vertical: 48),
+      padding: EdgeInsets.symmetric(horizontal: 24, vertical: 38),
       child: Column(
         children: [
           Text("Notifications", style: TextStyle(fontFamily: 'Raleway', fontSize: 18)),
           SizedBox(width: 16),
           ListTile(
             leading: Icon(Icons.mark_chat_read_sharp),
-            title: Text('Purchase Inquiry from User A'),
+            title: Text('Purchase Inquiry from Katie'),
             trailing: Icon(Icons.circle_notifications_outlined),
           ),
           ListTile(
             leading: Icon(Icons.mark_chat_unread_sharp),
-            title: Text('Purchase Inquiry from User B'),
+            title: Text('Purchase Inquiry from Shivanshu'),
             trailing: Icon(Icons.circle_notifications_outlined),
           ),
           ListTile(
             leading: Icon(Icons.mark_chat_read_sharp),
-            title: Text('Purchase Inquiry from User C'),
+            title: Text('Purchase Inquiry from George'),
             trailing: Icon(Icons.circle_notifications_outlined),
+          ),
+        ],
+      ),
+    );
+  }
+}
+class Badges extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 24, vertical: 18),
+      child: Column(
+        children: [
+          Text("Badges", style: TextStyle(fontFamily: 'Raleway', fontSize: 18)),
+          Row(
+            children: [
+              SizedBox(width: 16),
+              CircleAvatar(radius: 50, backgroundImage: AssetImage('lib/ProfilePicture.png')),
+              CircleAvatar(radius: 50, backgroundImage: AssetImage('lib/ProfilePicture.png')),
+            ],
+
           ),
         ],
       ),
