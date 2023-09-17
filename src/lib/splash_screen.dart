@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
-
+import 'login_page.dart';
 import 'bottom_nav.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -30,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
         } else if (status == AnimationStatus.dismissed) {
           Navigator.pushReplacement(
             context,
-            MaterialPageRoute(builder: (context) => BottomNavBarApp()),
+            MaterialPageRoute(builder: (context) => LoginApp()),
           );
         }
       });

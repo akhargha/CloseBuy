@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'bottom_nav.dart';
 
 void main() {runApp(LoginApp());}
 
@@ -46,9 +47,9 @@ class _LoginFormState extends State<LoginForm> {
               final enteredPassword = _passwordController.text;
 
               if (enteredEmail == 'chickens.for.change@trincoll.edu' && enteredPassword == '12345') {
-               // Navigator.pushReplacement(context, MaterialPageRoute(
-                  //builder: (context) => BottomNavBarApp(),
-                //));
+                Navigator.pushReplacement(context, MaterialPageRoute(
+                  builder: (context) => BottomNavBarApp(),
+                ));
               } else {
                 // Display an error message for failed login
                 ScaffoldMessenger.of(context).showSnackBar(
